@@ -1,0 +1,295 @@
+/* --- KAWAII PASTEL DESIGN SYSTEM (BUBU & DUDU VIBES) --- */
+:root {
+    --pastel-bg: linear-gradient(180deg, #fff0f3 0%, #ffe3e8 100%);
+    --bubu-pink: #ff85a1;
+    --dudu-cream: #fff9db;
+    --cute-strawberry: #ff477e;
+    --bubblegum-dark: #4a2830;
+    --white-cloud: rgba(255, 255, 255, 0.9);
+    --cute-shadow: 0 15px 30px rgba(255, 133, 161, 0.2);
+    --spring-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--pastel-bg);
+    color: var(--bubblegum-dark);
+    overflow: hidden;
+}
+
+/* 1. Adorable Countdown Screen Overlay */
+#cute-loader {
+    position: fixed;
+    inset: 0;
+    background: #fff0f3;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease, transform 0.6s var(--spring-bounce);
+}
+
+.loader-cloud-container {
+    background: white;
+    padding: 3rem 4rem;
+    border-radius: 40px;
+    box-shadow: var(--cute-shadow);
+    text-align: center;
+    border: 4px solid #ffe3e8;
+}
+
+.cute-mascot-avatar {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#countdown-bubble {
+    font-size: 6.5rem;
+    font-weight: 900;
+    color: var(--cute-strawberry);
+    line-height: 1;
+    animation: bubblePop 1.1s infinite;
+}
+
+.cute-subtext {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--bubu-pink);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+/* 2. Main Application Viewport Layout Frame */
+#cute-app-viewport {
+    opacity: 0;
+    transform: scale(0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+    transition: opacity 1.2s ease, transform 1.2s var(--spring-bounce);
+}
+
+.cute-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.bubble-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 0 0 1.2rem 0;
+}
+
+.heart-pulse-text {
+    color: var(--cute-strawberry);
+    display: inline-block;
+    animation: heartWobble 1.5s ease-in-out infinite;
+}
+
+/* Cloud Progress Bar tracking pages */
+.cloud-progress-bar {
+    width: 120px;
+    height: 10px;
+    background: rgba(255, 133, 161, 0.15);
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(255, 133, 161, 0.2);
+}
+
+#progress-fill {
+    width: 25%;
+    height: 100%;
+    background: var(--cute-strawberry);
+    border-radius: 20px;
+    transition: width 0.5s var(--spring-bounce);
+}
+
+/* 3. The Storyboard Deck Interaction Layout */
+.cute-story-deck {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cute-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(40px) scale(0.9) rotate(-3deg);
+    pointer-events: none;
+    transition: transform 0.6s var(--spring-bounce), opacity 0.6s ease;
+}
+
+.cute-slide.active {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.cute-slide.passed {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.85) rotate(4deg);
+    pointer-events: none;
+}
+
+/* 4. The Kawaii Card Components */
+.kawaii-card {
+    background: var(--white-cloud);
+    border-radius: 35px;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--cute-shadow);
+    border: 3px solid #fff5f7;
+}
+
+.bubu-dudu-stage {
+    background: #fffcf2;
+    border: 3px dashed #ffccd5;
+    border-radius: 25px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.kawaii-card h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0 0 0.6rem 0;
+    color: var(--bubblegum-dark);
+}
+
+.kawaii-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #7a5c65;
+    margin: 0;
+    flex: 1;
+    font-weight: 500;
+}
+
+/* Soft Rounded Pastel Nav and Action UI Elements */
+.cute-nav-btn {
+    background: #fff0f3;
+    border: 2px solid #ffccd5;
+    color: var(--cute-strawberry);
+    padding: 12px 32px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cute-nav-btn:active {
+    transform: scale(0.95);
+    background: #ffe3e8;
+}
+
+.mega-cute-btn {
+    background: linear-gradient(135deg, var(--bubu-pink), var(--cute-strawberry));
+    color: white;
+    border: none;
+    padding: 16px 36px;
+    font-size: 1.05rem;
+    font-weight: 900;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 71, 126, 0.3);
+    margin-top: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.mega-cute-btn:active {
+    transform: scale(0.95);
+}
+
+/* 5. Custom Animation Timers */
+@keyframes bubblePop {
+    0%, 100% { transform: scale(0.9); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes heartWobble {
+    0%, 100% { transform: scale(1) rotate(-3deg); }
+    50% { transform: scale(1.08) rotate(3deg); }
+}
+
+.float-anim-1 { animation: cuteFloat 4s ease-in-out infinite; }
+.float-anim-2 { animation: cuteFloat 4.5s ease-in-out infinite 0.3s; }
+.float-anim-3 { animation: cuteFloat 4.2s ease-in-out infinite 0.6s; }
+
+.squish-anim { animation: bearSquish 2s ease-in-out infinite; }
+.candle-flicker { animation: stagePulse 2.5s ease-in-out infinite; }
+
+.flying-love-hearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+.bubble-heart {
+    position: absolute;
+    font-size: 2.2rem;
+    bottom: 10px;
+    opacity: 0;
+    animation: heartFloatUp 2.2s linear infinite;
+}
+
+@keyframes cuteFloat {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes bearSquish {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08, 0.94); }
+}
+
+@keyframes stagePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+@keyframes heartFloatUp {
+    0% { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.2) rotate(15deg); opacity: 0; }
+}
+
+/* Responsive framework layout metrics optimized for iPads */
+@media(max-width: 768px) {
+    .bubble-title { font-size: 1.9rem; }
+    .kawaii-card { padding: 2rem 1.5rem; height: 88%; }
+    .bubu-dudu-stage { height: 135px; font-size: 3.2rem; }
+}
