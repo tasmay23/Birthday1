@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday Babyyyyy! 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Super fun confetti script for sweet heart explosions -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Cute Pastel Loading Screen -->
+    <div id="cute-loader">
+        <div class="loader-cloud-container">
+            <div class="cute-mascot-avatar">🐻✨🐾</div>
+            <div id="countdown-bubble">3</div>
+            <p class="cute-subtext">Cuteness overload loading...</p>
+        </div>
+    </div>
+
+    <!-- Main Adorable Viewport Framework -->
+    <div id="cute-app-viewport">
+        <header class="cute-header">
+            <h1 class="bubble-title">HAPPY BIRTHDAY, <br><span class="heart-pulse-text">BABYYYYY! 👑</span></h1>
+            <div class="cloud-progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </header>
+
+        <main class="cute-story-deck">
+            <!-- Scene 1: The Proposal -->
+            <section class="cute-slide active" data-step="0">
+                <div class="kawaii-card float-anim-1">
+                    <div class="bubu-dudu-stage">
+                        <span class="bear dudu">🐻🧎‍♂️</span>
+                        <span class="ring-sparkle">💍✨</span>
+                        <span class="bear bubu">🐼👩‍🦰</span>
+                    </div>
+                    <h2>The Day Dudu Asked!</h2>
+                    <p>From the second I asked you to be mine, my heart did a giant happy flip! You are my favorite person forever and ever.</p>
+                    <button class="cute-nav-btn next-slide-trigger">Next Page ✨🐾</button>
+                </div>
+            </section>
+
+            <!-- Scene 2: The Hug -->
+            <section class="cute-slide" data-step="1">
+                <div class="kawaii-card float-anim-2">
+                    <div class="bubu-dudu-stage squish-anim">
+                        <span class="bear">🐻❤️🐼</span>
+                    </div>
+                    <h2>Squishy Bear Hugs!</h2>
+                    <p>Your hugs are literally the warmest, safest, most comfortable place in the whole wide universe. Never letting go!</p>
+                    <button class="cute-nav-btn next-slide-trigger">Next Page ✨🐾</button>
+                </div>
+            </section>
+
+            <!-- Scene 3: The Kiss -->
+            <section class="cute-slide" data-step="2">
+                <div class="kawaii-card float-anim-3">
+                    <div class="bubu-dudu-stage">
+                        <div class="flying-love-hearts">
+                            <span class="bubble-heart">💋</span>
+                            <span class="bubble-heart" style="animation-delay:0.5s;">💖</span>
+                            <span class="bubble-heart" style="animation-delay:1s;">💕</span>
+                        </div>
+                        <span class="bear">🐻💋🐼</span>
+                    </div>
+                    <h2>Chu! Sweet Kisses!</h2>
+                    <p>Every single kiss from you makes my heart beat super fast. You still give me butterflies every single day! 🦋</p>
+                    <button class="cute-nav-btn next-slide-trigger">Next Page ✨🐾</button>
+                </div>
+            </section>
+
+            <!-- Scene 4: The Cake Altar -->
+            <section class="cute-slide" data-step="3" id="cake-altar-slide">
+                <div class="kawaii-card glass-glow">
+                    <div class="bubu-dudu-stage candle-flicker" id="cake-avatar">🐻🎂🐼</div>
+                    <h2 id="final-headline">Make a Wish, Beautiful!</h2>
+                    <p id="final-subtext">Dudu loves Bubu infinitely! Tap below to blow out the candles, make your biggest wish, and trigger the birthday party!</p>
+                    <div class="cute-action-vault">
+                        <button class="mega-cute-btn" id="blow-candle-trigger">BLOW OUT CANDLES 🕯️💨</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+    
